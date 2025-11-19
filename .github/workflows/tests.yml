@@ -2,9 +2,9 @@ name: Tests
 
 on:
   push:
-    branches: [ "1.0" ]
+    branches: [ "1.1" ]
   pull_request:
-    branches: [ "1.0" ]
+    branches: [ "1.1" ]
 
 permissions:
   contents: read

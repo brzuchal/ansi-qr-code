@@ -25,6 +25,20 @@ A PHP library for generating QR codes in the terminal using ANSI escape codes.
 composer require brzuchal/ansi-qr-code
 ```
 
+## Installation
+
+### One-liner (Recommended)
+
+```bash
+curl -s https://raw.githubusercontent.com/brzuchal/ansi-qr-code/1.1/install.sh | bash
+```
+
+### Composer
+
+```bash
+composer global require brzuchal/ansi-qr-code
+```
+
 ## Usage
 
 ### Command Line
