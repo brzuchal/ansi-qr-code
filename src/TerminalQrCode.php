@@ -7,6 +7,7 @@ namespace Brzuchal\TerminalQr;
 use BaconQrCode\Common\ErrorCorrectionLevel;
 use BaconQrCode\Encoder\Encoder;
 use Brzuchal\TerminalQr\Renderer\AnsiRenderer;
+use Brzuchal\TerminalQr\Renderer\AsciiRenderer;
 use Brzuchal\TerminalQr\Renderer\Renderer;
 
 final class TerminalQrCode
@@ -18,8 +19,21 @@ final class TerminalQrCode
         Renderer|null $renderer = null,
         ErrorCorrectionLevel|null $errorCorrectionLevel = null,
     ) {
-        $this->renderer = $renderer ?? new AnsiRenderer();
+        $this->renderer = $renderer ?? $this->detectRenderer();
         $this->errorCorrectionLevel = $errorCorrectionLevel ?? ErrorCorrectionLevel::L();
+    }
+
+    private function detectRenderer(): Renderer
+    {
+        if (getenv('NO_COLOR') !== false || getenv('TERM') === 'dumb') {
+            return new AsciiRenderer();
+        }
+
+        if (!stream_isatty(STDOUT)) {
+            return new AsciiRenderer();
+        }
+
+        return new AnsiRenderer();
     }
 
     public function render(string $content): string

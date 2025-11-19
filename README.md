@@ -14,8 +14,9 @@ A PHP library for generating QR codes in the terminal using ANSI escape codes.
 ## Features
 
 *   **ANSI Renderer**: Uses half-block characters (`▀`, `▄`, `█`) and ANSI colors to render high-resolution QR codes in the terminal.
-*   **ASCII Renderer**: Fallback renderer using full blocks (`██`) for wider compatibility.
-*   **PHP 8.3 Support**: Fully compatible and tested with PHP 8.3.
+*   **ASCII Renderer**: Fallback renderer using full block characters (`██`) and spaces for broader compatibility.
+*   **Auto-detection**: Automatically selects the best renderer based on terminal capabilities (TTY, `NO_COLOR`, `TERM`).
+*   **Zero Dependencies**: Only requires `bacon/bacon-qr-code` for matrix generation.
 *   **Static Analysis**: Strict type checking with PHPStan (max level).
 *   **Coding Standard**: Adheres to `brzuchal/coding-standard`.
 
