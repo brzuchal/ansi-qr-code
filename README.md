@@ -29,6 +29,8 @@ composer require brzuchal/ansi-qr-code
 
 ### One-liner (Recommended)
 
+Installs the `qr` command to `~/.local/bin`.
+
 ```bash
 curl -s https://raw.githubusercontent.com/brzuchal/ansi-qr-code/1.1/install.sh | bash
 ```
