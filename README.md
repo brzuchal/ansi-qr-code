@@ -7,6 +7,10 @@ A PHP library for generating QR codes in the terminal using ANSI escape codes.
 
 ![Terminal QR Demo](docs/demo.png)
 
+## Command Line Tool
+
+![CLI Demo](docs/demo_cli.png)
+
 ## Features
 
 *   **ANSI Renderer**: Uses half-block characters (`▀`, `▄`, `█`) and ANSI colors to render high-resolution QR codes in the terminal.
@@ -22,6 +26,20 @@ composer require brzuchal/ansi-qr-code
 ```
 
 ## Usage
+
+### Command Line
+
+After installing the package globally or in a project, you can use the `qr` command:
+
+```bash
+# If installed globally
+qr "https://github.com/brzuchal/ansi-qr-code"
+
+# If installed in a project
+vendor/bin/qr "Your text here"
+```
+
+### PHP Code
 
 ```php
 use Brzuchal\TerminalQr\TerminalQrCode;

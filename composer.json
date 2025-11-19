@@ -3,6 +3,9 @@
     "description": "PHP library for creating QR codes in ANSI format for terminal",
     "type": "library",
     "license": "MIT",
+    "bin": [
+        "bin/qr"
+    ],
     "repositories": [
         {
             "type": "vcs",
