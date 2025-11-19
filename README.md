@@ -5,6 +5,8 @@ A PHP library for generating QR codes in the terminal using ANSI escape codes.
 ![PHP Version](https://img.shields.io/badge/php-%5E8.3-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+![Terminal QR Demo](docs/demo.png)
+
 ## Features
 
 *   **ANSI Renderer**: Uses half-block characters (`▀`, `▄`, `█`) and ANSI colors to render high-resolution QR codes in the terminal.
